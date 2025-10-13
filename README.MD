@@ -1,4 +1,4 @@
-# Prosody and the Social Feedback Loop in Depression
+# Prosody in the Social Feedback Loop in Depression
 *Final Clean Pipeline Notebook and Analysis Bundle*
 
 ## Overview
