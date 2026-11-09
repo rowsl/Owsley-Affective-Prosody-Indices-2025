@@ -1,73 +1,39 @@
-# Prosody in the Social Feedback Loop in Depression
-*Final Clean Pipeline Notebook and Analysis Bundle*
+# Depressive Symptom Severity, Acoustic Variability, and Temporal Speech Patterns in Semi-Structured Clinical Interviews
 
 ## Overview
-This repository contains the reproducible notebook and dependencies for the paper:
 
-> **Prosody and the Social Feedback Loop in Depression**  
-> The notebook computes and visualizes two derived indices of prosodic change:
-> - **Affective Responsivity Index (ARI):** Within-subject expressivity.
-> - **Temporal Responsivity Index (TRI):** Timing adaptability and repair.
->
-> Both indices are derived from standardized **COVAREP** and **eGeMAPS** features in the DAIC-WOZ dataset.  
-> The dataset did not include column headers, so standardized feature headers were applied for consistency.
+This repository contains analysis code associated with the revised manuscript *Depressive Symptom Severity, Acoustic Variability, and Temporal Speech Patterns in Semi-Structured Clinical Interviews*.
 
-The analysis includes robust preprocessing (median absolute deviation), descriptive statistics, visualizations, and PHQ correlation analysis.
-The Affective Responsivity Index (ARI) models within-subject expressivity using robust standardized prosodic features.
-The final analysis retained **F0** and **Loudness** after dropping **Jitter** and **Shimmer**, which contributed minimally to variance explained.
-  
-A **Future Directions** section discusses a conceptual **Affective Adaptivity Index (AAI)** for later work.
+The study examines associations between PHQ-8 depressive symptom severity, acoustic energy and fundamental frequency (F0) variability, and temporal speech patterns in semi-structured DAIC-WOZ clinical interviews.
 
----
+## Current Analysis
 
-## Contents
-| File | Description |
-|------|--------------|
-| `prosody_paper_final_pipeline.ipynb` | Main Jupyter notebook — clean, runnable pipeline for ARI/TRI analysis. |
-| `requirements.txt` | Python dependencies for reproducibility. |
-| *(optional)* `final_with_ARI_TRI.csv` | Output dataset with computed indices (generated when you run the notebook). |
+The final quadratic sensitivity analysis examines acoustic variability across six interview-endpoint and elapsed-time configurations.
 
----
+The principal findings include:
 
-## Setup Instructions
+- A consistent inverted-U association between depressive symptom severity and acoustic energy variability.
+- An estimated maximum near PHQ-8 = 11.
+- No comparably robust quadratic association for F0 variability.
 
-### 1. Create environment
-```bash
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+The manuscript also examines PHQ-8-by-time interactions in speech proportion using Artstein turn-level data.
 
-### 2. Run the notebook
-Launch JupyterLab or Jupyter Notebook and open:
-```bash
-jupyter lab prosody_paper_final_pipeline.ipynb
-```
-Execute cells from top to bottom to reproduce all results.
+## Repository Contents
 
----
+- **Final sensitivity analysis (`.py`):** Python script supporting the acoustic sensitivity analyses and quadratic figure.
+- **`Owsley_2025_Affective_Prosody_Notebook.ipynb`:** Earlier exploratory notebook involving the Affective Responsivity Index (ARI) and Temporal Responsivity Index (TRI). This notebook is retained as historical research and does not represent the final manuscript analysis.
+- **`requirements.txt`:** Existing dependency list, pending verification against the revised analysis scripts.
 
-## Expected Outputs
-- **Computed indices:** `ARI`, `ARI_F0Loud`, and `TRI`
-- **Descriptive statistics:** Summary tables and PHQ correlations
-- **Visualization:** Boxplot of ARI_F0Loud across PHQ-8 bands
-- **Export:** Clean CSV with derived indices for further analysis
+Additional analysis files and reproduction instructions may be added as the repository is updated.
 
----
+## Data Availability
 
-## Reproducibility Checklist
-- ✅ All required packages are listed in `requirements.txt`  
-- ✅ Dataset path variable (`path`) easily adjustable for your environment  
-- ✅ Outputs cleared for fresh execution  
-- ✅ No redundant or debug cells  
-- ✅ Markdown commentary explains each analysis step
+The analyses use the DAIC-WOZ dataset. Access to the original interview data is governed by the dataset's access and licensing requirements. The underlying participant-level data are not distributed through this repository.
 
----
+## Reproducibility Status
+
+This repository is being updated to align with the revised manuscript. The acoustic sensitivity analysis is the current focus. The remaining analysis code, dependencies, and execution instructions have not yet been fully audited.
 
 ## Citation
-If you reuse or adapt this notebook, please cite the parent paper:
 
-> Owsley, R. (2025). *Prosody and the Social Feedback Loop in Depression.*  
-> [Manuscript in preparation]
-
----
+Owsley, R. (2026). *Depressive symptom severity, acoustic variability, and temporal speech patterns in semi-structured clinical interviews*. Manuscript in preparation.
