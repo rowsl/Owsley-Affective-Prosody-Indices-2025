@@ -1,4 +1,7 @@
 # Depressive Symptom Severity, Acoustic Variability, and Temporal Speech Patterns in Semi-Structured Clinical Interviews
+## Final Analysis Code
+**[Final Quadratic Sensitivity Analysis]
+(PHQ8_Final_Sensitivity_With_Quadratic_Figure_Rug.py)**
 
 ## Overview
 
